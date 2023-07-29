@@ -1,0 +1,23 @@
+.businessesContainer{    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    grid-gap: 4rem 2rem;
+    padding: 1rem 2rem 6rem;
+    margin:0 auto;
+    max-width:70rem;
+    position:relative;
+    @media (max-width: 680px) {
+        grid-gap: 0;
+        padding: 1rem 1rem 6rem;
+    }
+}
+
+.getMoreButton{
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    margin:0 auto 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,147 @@
+$card-shadow: #a0a0a0;
+$card-border: #e6e6e6;
+
+.businessCard{
+    position: relative;
+    width:30%;
+    height:25rem;
+    min-width: 19rem;
+    max-width: 20rem;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 0.016rem solid $card-border;
+    border-radius: 0.8rem;
+    box-shadow: 0px 3px 5px -3px $card-shadow;
+
+    &:hover{
+        box-shadow: 0px 3px 5px -1px $card-shadow;
+        cursor: pointer;
+    }
+
+    &__image{
+        width: 100%;
+        height: 12rem;
+        background: gray;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title{
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 1.5rem 0 1rem;
+    }
+    &__line{
+        margin:1rem 0 1.3rem;
+        width: 100%;
+        height: 0.0625rem;
+        background-color: #ccc;
+        border: none;
+    }
+    &__rates{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+    &__rating{
+        display: flex;
+        &.rating-0{
+            filter: invert(92%) sepia(6%) saturate(712%) hue-rotate(316deg) brightness(85%) contrast(104%);
+        }
+        &.rating-1{
+            filter: invert(91%) sepia(6%) saturate(5129%) hue-rotate(350deg) brightness(101%) contrast(92%);
+        }
+        &.rating-2{
+            filter: invert(72%) sepia(36%) saturate(846%) hue-rotate(352deg) brightness(96%) contrast(101%);
+        }
+        &.rating-3{
+            filter: invert(69%) sepia(54%) saturate(2254%) hue-rotate(337deg) brightness(99%) contrast(94%);
+        }
+        &.rating-4{
+            filter: invert(50%) sepia(55%) saturate(869%) hue-rotate(337deg) brightness(102%) contrast(92%);
+        }
+        &.rating-5{
+            filter: invert(33%) sepia(33%) saturate(3619%) hue-rotate(343deg) brightness(106%) contrast(92%);
+        }
+    }
+    &__url{
+        position:absolute;
+        bottom: -1.5rem;
+        width: 8rem;
+        height: 3rem;
+        text-align: center;
+        line-height: 3rem;
+        border-radius: 0.5rem;
+        background: #e78152;
+        background: linear-gradient(90deg, rgba(231,129,82,1) 0%, rgba(234,154,80,1) 40%, rgba(236,204,181,1) 100%);
+        text-transform: uppercase;
+        font-weight: 600;
+        box-shadow: 0px 3px 5px -1px $card-shadow;
+        color: #fff;
+        &:hover{
+            box-shadow: 0px 3px 5px 1px $card-shadow;
+        }
+    }
+    @media (max-width: 680px) {
+        padding: 1rem;
+        display: flex;
+        height: 10rem;
+        width:100%;
+        max-width:100%;
+        justify-content: flex-start;
+        box-shadow: none;
+        border: 0;
+        border-bottom: solid 0.0625rem $card-border;
+        border-radius: 0;
+        &:hover{
+            box-shadow: none;
+        }
+        &__image{
+            width: 8rem;
+            min-width: 8rem;
+            height:8rem;
+        }
+        &__information{
+            width: calc(100% - 8.5rem);
+            justify-content: flex-start;            
+            align-items: flex-start;
+            margin-left: 0.5rem;
+        }
+        &__title{
+            margin:0 0 0.25rem;
+            font-size: 1em;
+            padding: 0;
+            width: 90%;
+        }
+        &__line{
+            display: none;
+        }
+        &__rates{
+            display: flex;
+            flex-direction: column;
+            padding:0;
+            margin-bottom: 1rem;
+        }
+        &__rating{
+            margin-bottom: 0.25rem;
+        }
+        &__url{
+            position: relative;
+            font-size: 1em;
+            line-height: 1rem;
+            height:2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            bottom: unset;
+        }
+    }
+}
